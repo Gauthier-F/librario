@@ -1,22 +1,51 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/solid.min.css">
 
-<!-- ajout toolbar -->
-<div class="toolbar" role="banner">
-  <img
-    width="50"
-    alt="Librario Logo"
-    src="assets/img/logo.JPG"
-  />
+<div class="window">
+  <div class="header">
+    <!-- ajout toolbar avec logo -->
+    <div class="navbar" role="banner">
+      <img class="img" width="50"
+           alt="Librario Logo"
+           src="assets/img/logo.JPG" />
 
-  <!-- ajout bouton de navigation-->
+      <!-- ajout bouton de navigation-->
+      <div class="btn-group col-3 mr-3">
+        <button class=" mr-1 btn btn-light " id="btn"><i class="fa fa-home"></i></button>
+        <button class=" mr-1 btn btn-light" id="btn" routerLink="/collection"><i class="fas fa-book-open"></i></button>
+        <button class=" mr-1 btn btn-light" id="btn" routerLink="/wish"><i class="fa fa-list"></i></button>
+      </div>
+      <div class="btn-group mr-3">
+        <button class="col mr-1 btn btn-light" id="btn" routerLink='/registration'>Inscription</button>
+        <button class="col mr-1 btn btn-secondary" id="btn" routerLink='/connection'>Connexion</button>
+        <hr  />
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ajout root -->
+  <div class="content">
+
+    <div class="view">
+     
+      <router-outlet></router-outlet>
+
+
+    </div>
+
+    <footer class="footer">
+      <hr />
+      <p>Site crée par Novem</p>
+    </footer>
+
+  </div>
+
+  
+
 </div>
 
-<!-- ajout root -->
 
 
 
-<footer>
-  
-  <div class="container">
-    <p>Site crée par Novem</p>
-  </div>
-</footer>
+
